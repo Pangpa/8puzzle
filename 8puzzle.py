@@ -27,8 +27,9 @@ def cost(a): #a -pointer to node or a node
         for j in range(n):
             if a.matrix[i][j] == 0:
                 continue
-            x = int((a.matrix[i][j] - 1)/n)
-            y = int((a.matrix[i][j] - 1)%n)
+            #remove -1 from below calculation of x,y. if Goal state starts with 0 
+            x = int((a.matrix[i][j] - 1)/n) 
+            y = int((a.matrix[i][j] - 1)%n) 
             s = s + abs(i-x)+abs(j-y)
     return s
 #Feasiblity
